@@ -16,8 +16,8 @@ class InitiativeController extends Controller
     public function index()
     {
         $initiatives = Initiative::query()
-            ->latest('id')
-            ->paginate(5);
+            ->oldest('id')
+            ->get();
 
         return InitiativeResource::collection($initiatives);
     }
