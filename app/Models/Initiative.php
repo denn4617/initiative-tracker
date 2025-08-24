@@ -15,4 +15,8 @@ class Initiative extends Model
         'impact_score',
         'category',
     ];
+
+    protected $casts = [
+        'impact_score' => 'integer',
+    ];
 }
