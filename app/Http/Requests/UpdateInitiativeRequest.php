@@ -22,7 +22,7 @@ class UpdateInitiativeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'        => ['sometimes', 'required', 'string', 'max:255'],
+            'title'        => ['sometimes', 'required', 'string', 'max:150'],
             'description'  => ['sometimes', 'nullable', 'string'],
             'impact_score' => ['sometimes', 'required', 'integer', 'between:1,10'],
             'category'     => ['sometimes', 'required', 'string', 'max:100'],

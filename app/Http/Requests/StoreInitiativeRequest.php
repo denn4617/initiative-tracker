@@ -22,7 +22,7 @@ class StoreInitiativeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'        => ['required', 'string', 'max:255'],
+            'title'        => ['required', 'string', 'max:150'],
             'description'  => ['nullable', 'string'],
             'impact_score' => ['required', 'integer', 'between:1,10'],
             'category'     => ['required', 'string', 'max:100'],
