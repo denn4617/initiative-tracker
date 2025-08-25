@@ -13,7 +13,6 @@
                     <option value="impact_score" class="text-black">Impact Score</option>
                 </select>
 
-                <!-- Segmented Asc/Desc switch -->
                 <div role="radiogroup" aria-label="Sort direction"
                     class="inline-flex rounded-md border overflow-hidden">
                     <button type="button" role="radio" :aria-checked="isAsc"
@@ -95,7 +94,6 @@ const sortedItems = computed(() => {
     })
 })
 
-// --- data loading and mutations ---
 async function load() {
     loading.value = true
     try {

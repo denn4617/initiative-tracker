@@ -4,15 +4,12 @@
             <h1 class="text-2xl font-bold">Initiative Tracker</h1>
         </header>
 
-        <!-- List now emits "add" when the plus card is clicked -->
         <InitiativesList ref="listRef" @edit="startEdit" @add="showCreate = true" />
 
-        <!-- Create -->
         <Modal :open="showCreate" title="New initiative" @close="showCreate = false">
             <InitiativeForm submit-label="Create" @saved="afterSave" @cancel="showCreate = false" />
         </Modal>
 
-        <!-- Edit -->
         <Modal :open="!!editing" title="Edit initiative" @close="editing = null">
             <InitiativeForm :key="editing?.id || 'new'" :initiative="editing" submit-label="Update" @saved="afterSave"
                 @cancel="editing = null" />
